@@ -1,0 +1,759 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from fcidepotonline.gov.in/farmers/register by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Mar 2018 04:09:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>FCI Depot Online System - Farmer Registration Page</title>
+	<link rel="stylesheet" href="../css/jQueryvalidations.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../css/site.css" rel="stylesheet" type="text/css" />
+	<link href="../css/general.css" rel="stylesheet" type="text/css" />
+	<link href="../css/bootstrap.min.css" rel="stylesheet" /> 
+     <link href="../css/about.css" rel="stylesheet" type="text/css"/>
+	<style type="text/css">
+		.input-lg, .form-control {
+			margin-bottom: 15px !important;
+			height: 50px !important;
+			width: 100% !important;
+		}
+		
+		html,body {
+	  		height: 100%;	  	
+		}
+	
+		#wrap {
+			min-height: 100%;
+	  		height: auto;
+	  		/* Negative indent footer by its height */
+	  		margin: 0 auto -60px;
+	  		/* Pad bottom by footer height */
+	  		padding: 0 0 60px;
+		}
+		
+		label{
+			margin-left: 0px !important;
+		}
+	
+	#welcomeDiv {
+			float:right;
+			position:absolute;
+			margin-top:0px;
+			right:0;
+			top:0;
+			margin-right: 25px;
+		}
+		
+		a.fill-div {
+		    display: block;
+		    height: 100%;
+		    width: 100%;
+		    text-decoration: none;
+		    z-index: 999999999 !important;
+		}
+		
+		body{
+		margin: -10px !important;
+		}
+	</style>
+	<script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/general.js"></script>
+	<script>
+		$(function(){
+			$("#about").hide();
+		});
+	</script>
+</head>
+<body >
+<div id="wrap">
+	    
+			
+			
+				<div id="header">
+	<div id="logo" class="hidden">
+		<!--  <img src="images/DepoSoft2.png" height="100px" width="100px" style="margin-bottom: 7px"/> -->
+	</div>
+	<div id="title">
+		<p class="site-title" align="center">
+			<!--  FCI Depot Online System --></p>
+			<div id="welcomeDiv">
+				<a href="#about" ><span id="aboutSpan"><b>About</b></span></a>
+										
+			</div>
+	</div>
+</div>
+			
+		
+		<div id="contentliquid">
+			<div class="container">
+			<!-- <div class="content"> -->
+				
+					
+						<div>
+							<h4>किसान पंजीकरण</h4>
+						</div>
+						<div class="row">
+							<div class="col-xs-12" style = "padding: 10px 0px 10px 15px">
+								पंजीकरण के लिए कृपया निम्नलिखित जानकारी भरें। (<font color="red">*</font>) अनिवार्य क्षेत्र को इंगित करता है।
+							</div>
+						</div>
+						<br>
+					
+					
+				
+				
+				<form action="#" method="POST" id="fillForm" autocomplete=off>
+					<span id="successDiv" style='font-size: 13px; position: relative; margin-left: 5px;'></span>
+					<span id="errorDiv" style='font-size: 13px; position: relative; margin-left: 5px;'></span>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="farmername" class="control-label required">किसान का नाम</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="name" id="name" class="form-control" value="">
+						</div>
+						
+					</div>
+				
+					<h4>पता</h4>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="Address1" class="control-label required">पता 1</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="address1" name="address1" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="Address2" class="control-label">पता 2</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="address2" name="address2" class="form-control" value="">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="Address3" class="control-label">पता 3</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="address3" name="address3" class="form-control" value="" >
+						</div>
+					</div>
+					
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="State" class="control-label required">राज्य</label>
+						</div>
+						<div class="col-xs-12">
+							<select name="state.id" id="state" class="form-control" onchange="getDistrictList(this.value)">
+								
+									<option value="1" >ANDAMAN & NICOBAR</option>
+								
+									<option value="2" >ANDHRA PRADESH</option>
+								
+									<option value="3" >ARUNACHAL PRADESH</option>
+								
+									<option value="4" >ASSAM</option>
+								
+									<option value="5" >BIHAR</option>
+								
+									<option value="6" >CHANDIGARH</option>
+								
+									<option value="7" >CHHATTISGARH</option>
+								
+									<option value="8" >DADRA AND NAGAR HAVE</option>
+								
+									<option value="9" >DAMAN AND DIU</option>
+								
+									<option value="10" >DELHI</option>
+								
+									<option value="11" >GOA</option>
+								
+									<option value="12" >GUJARAT</option>
+								
+									<option value="13" >HARYANA</option>
+								
+									<option value="14" >HIMACHAL PRADESH</option>
+								
+									<option value="15" >JAMMU AND KASHMIR</option>
+								
+									<option value="16" >JHARKHAND</option>
+								
+									<option value="17" >KARNATAKA</option>
+								
+									<option value="18" >KERALA</option>
+								
+									<option value="19" >LAKSHWADWEEP</option>
+								
+									<option value="20" >MADHYA PRADESH</option>
+								
+									<option value="21" >MAHARASHTRA</option>
+								
+									<option value="22" >MANIPUR</option>
+								
+									<option value="23" >MEGHALAYA</option>
+								
+									<option value="24" >MIZORAM</option>
+								
+									<option value="25" >NAGALAND</option>
+								
+									<option value="26" >ODISHA</option>
+								
+									<option value="27" >PUDUCHERRY</option>
+								
+									<option value="28" >PUNJAB</option>
+								
+									<option value="29" >RAJASTHAN</option>
+								
+									<option value="30" >SIKKIM</option>
+								
+									<option value="31" >TAMIL NADU</option>
+								
+									<option value="32" >TELANGANA</option>
+								
+									<option value="33" >TRIPURA</option>
+								
+									<option value="34" >UTTAR PRADESH</option>
+								
+									<option value="35" >UTTARAKHAND</option>
+								
+									<option value="36" >WEST BENGAL</option>
+								
+							</select> 
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="District" class="control-label required">जिला</label>
+						</div>
+						<div class="col-xs-12">
+							<select name="revenuedistrict.id" id="district" class="form-control" onchange="getAgencyList(this.value)"></select>
+						</div>
+						<input name="districtEdit" id="districtEdit" class="form-control hidden" value="">
+					</div> 
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="Pincode" class="control-label required">पिन कोड</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="pincode" name="pincode" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="mobilenumber" class="control-label required">मोबाइल नंबर</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="mobilenumber" name="mobilenumber" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="pannumber" class="control-label">पैन नंबर</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="pannumber" name="pannumber" class="form-control" value="">
+						</div>
+					</div>
+					
+				<!-- 	<div class="row">
+						<div class="col-xs-12">
+							<label for="agency" class="control-label ">Agency</label>
+						</div>
+						<div class="col-xs-12">
+							<select name="mappedagencyId" id="agency" class="form-control" >
+							</select>
+						</div>
+					</div>  -->
+					
+					<h4>बैंक खाता विवरण</h4>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="accountnumber" class="control-label required">बैंक खाता संख्या</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="accountnumber" name="accountnumber" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="bankname" class="control-label required">बैंक का नाम</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="bankname" name="bankname" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="bankaddress" class="control-label">बैंक का पता</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="bankaddress" name="bankaddress" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="micrcode" class="control-label required">एम॰ आई॰ सी॰ आर॰ कोड</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="micrcode" name="micrcode" class="form-control" value="">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="ifsccode" class="control-label required">आई॰ एफ॰ एस॰ सी॰ कोड</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="ifsccode" name="ifsccode" class="form-control" value="">
+						</div>
+					</div>
+
+					<h4>खेती का विवरण</h4>
+					
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="cultivationarea" class="control-label required">खेती क्षेत्र(हेक्टेयर में)</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="cultivationarea" name="cultivationarea" class="form-control" value="">
+						</div>
+					</div>
+					
+					
+					
+					
+					<!-- <div class="row">
+						<div class="col-xs-12">
+							<label for="jformnumber" class="control-label ">JForm Number</label>
+						</div>
+						<div class="col-xs-12">
+							<input id="jformnumber" name="jformnumber" class="form-control" >
+						</div>
+					</div> -->
+					
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<label for="captchlabel">नीचे दिये के शब्द दर्ज करें: </label>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12" >
+							<input id="verificationTextForgPassDiv"	name="verifyCaptcha" class="form-control" required/>
+						</div>
+					</div>
+					<br/>
+					<img id="captchaImage" src="captcha" />
+					<i style="cursor: pointer;" onclick="reloadcaptcha()"><i class="glyphicon glyphicon-refresh" style="top:-20px;font-size: 18px;"></i></i>
+					<div class="row">
+						<div class="col-md-8">
+							<button id="button1id" name="button1id" class="btn btn-success">सुरक्षित करें</button>
+							
+							<a href="login.html" id="button2id" name="button2id " class="btn btn-danger">निरस्त करें</a>
+							
+							
+						</div>
+					</div>
+				<br><br>
+				
+
+<input 
+    type="hidden" class="csrftokentag"
+    id = "_synchronizerToken"
+    name="_synchronizerToken"
+    value="15203092407201152570308699574454"
+/>
+				</form>
+			</div>
+		</div>
+		</div>
+
+	<script src="../js/jquery.validate.min.js"></script>
+	<script	src="../js/jquery.additional-methods.min.js"></script>
+	<script>
+	function reloadcaptcha(){
+			var path = "/farmers/captcha?q="+ new Date().getTime();
+ 	 	$('#captchaImage').attr('src', path);
+	}
+	$(document).ready(function() {
+		var notification = "null"
+		var errorMsg = "null"
+		
+		
+		if(notification != "null"){
+			setSuccessMessage(notification);
+		}
+		if(errorMsg != "null"){
+			setErrorMessage(errorMsg);
+		}
+		$('#state').trigger('change');
+	});
+
+	function getDistrictList(stateId) {
+		$('#district').empty();
+		var districtEdit = $("#districtEdit").val();
+		$.ajax({
+			type:'GET',
+			url: '/farmers/district/list',
+			data: {stateId: stateId},
+			async: false,
+			success: function(result){
+				if(result.length > 0) {
+					for (var i = 0; i < result.length; i++) {
+						$('#district').append($("<option></option>").val(result[i].id).text(result[i].name));
+					}
+					getAgencyList(result[0].id);
+				}
+			},error: function(error){
+				alert('Error');
+			}
+		});
+		if(districtEdit != '')
+			$('#district').val(districtEdit);
+	}
+	
+	function setValue(id){
+		if($('#'+id).is(':checked')){
+			$('#'+id).val(true)
+		}else{
+			$('#'+id).val(false)
+		}
+	}
+	
+	function getAgencyList(districtId) {
+		$('#agency').empty();
+		$.ajax({
+			type:'GET',
+			url: '/farmers/agency/list',
+			data: {revdistrictid: districtId},
+			async: false,
+			success: function(result){
+				if(result.length > 0) {
+					$('#agency').append($("<option></option>").val(0).text("-- Please Select --"));
+					for (var i = 0; i < result.length; i++) {
+						$('#agency').append($("<option></option>").val(result[i].agencyId).text(result[i].agencyName));
+					}
+				}
+			},error: function(error){
+				alert('Error');
+			}
+		});
+	}
+	
+	function setSuccessMessage(msg) {
+		var temp = "<div class='alert alert-success' <div class='alert alert-success'>"+
+        "<span onclick='clearError()' class='close' data-dismiss='alert'>&times;</span>"+
+		   "<strong> "+msg+""+"</strong>"+
+		   "</div>";
+		$('#successDiv').html(temp);
+		$('html, body').animate({
+		scrollTop: $("#successDiv").offset().top
+		}, 500);
+		setTimeout(function() {
+		$("#successDiv").html('');
+		}, 10000);
+	}
+	
+	function setErrorMessage(msg) {
+		var temp = "<div class='alert alert-danger alert-error' <div class='alert alert-danger alert-error'>"+
+        "<span onclick='clearError()' class='close' data-dismiss='alert'>&times;</span>"+
+		   "<strong>Error!</strong> "+msg+""+
+		   "</div>";
+	
+		$('#errorDiv').html(temp);
+		$('html, body').animate({
+		scrollTop: $("#errorDiv").offset().top
+		}, 500);
+		setTimeout(function() {
+		$("#errorDiv").html('');
+		}, 10000);
+	}
+	
+	function clearError(){
+		$('#successDiv').html('');
+		$('#errorDiv').html('');
+	}
+
+	</script>
+	<script>
+		
+		$("#fillForm").validate({
+			rules : {
+				name : {
+					required : true
+				},
+				address1 : {
+					required : true
+				},
+				/* address2 : {
+					required : true
+				},
+				address3 : {
+					required : true
+				}, */
+				mobilenumber : {
+					required : true,
+					digits :true,
+					pattern:/^\d{10}$/
+				},
+				mappedregionid : {
+					required : true,
+					selectValidator : true
+				},
+				mappeddistrictid : {
+					required : true,
+					selectValidator : true
+				},
+				pincode : { //Dropdown 
+					required : true,
+					digits :true,
+					pattern:/^\d{6}$/
+				},
+				 mappedagencyId : {
+					required : true,
+					selectValidator : true
+				}, 
+				accountnumber : {
+					required : true, 
+					digits :true
+				},
+				bankname : {
+					required : true
+				},
+				/* bankaddress : {
+					required : true
+				}, */
+				micrcode : {
+					required : true
+				},
+				ifsccode : {
+					required : true
+				}, 
+				cultivationarea : {
+					required : true 
+				//	 pattern : \d+(\.\d{1,2})? 
+				}, 
+				/* mappedCultivationGrainId : {
+					required : true, 
+					selectValidator : true
+				}, */
+				jformnumber : {
+					required : true
+				},pannumber : {
+					pattern : /^[a-zA-Z]{5}\d{4}[a-zA-Z]{1}$/ 
+				}
+			},
+			messages : {
+				name : {
+					required : "Enter Name"
+				},
+				address1 : {
+					required : "Enter Address"
+				},
+				/* address2 : {
+					required : "Enter Address"
+				},
+				address3 : {
+					required : "Enter Address"
+				}, */
+				mobilenumber : {
+					required : "Enter Mobile number",
+					digits : "Please enter  only number",
+					pattern : "Enter only 10 digits",
+				},
+				mappedregionid : {
+					required : "Select State",
+					selectValidator : "Please select State"
+				},
+				mappeddistrictid : {
+					required : "Select District",
+					selectValidator : "Please select District"
+				},
+				pincode : {
+					required : "Enter Pincode",
+					digits : "Please enter a valid number",
+					pattern : "Enter only 6 digits",
+				},
+				/* mappedagencyId : {
+					required : "Select Agency",
+					selectValidator : "Please select Agency"
+				}, */
+				accountnumber : {
+					required : "Enter Accountnumber",
+					digits : "Please enter only number"
+				},
+				bankname : {
+					required : "Enter Bank Name"
+				},
+			/* 	bankaddress : {
+					required : "Enter Bank Address"
+				}, */
+				micrcode : {
+					required : "Enter MICR code"
+				},
+				ifsccode : {
+					required : "Enter IFSC code"
+				},
+				cultivationarea : {
+					required : "Enter the Area in Acres"
+					//pattern : "Enter valid value"  
+				},
+				/* mappedCultivationGrainId : {
+					required : "Please select the Grian/Crop",
+					selectValidator : "Please select the Grian/Crop"
+				}, */
+				jformnumber : {
+					required : "Please enter JForm number"
+				},
+				pannumber : {
+					pattern : "Enter a valid PAN Number"
+				}
+			}
+		});
+	
+		function appendToURL(type){
+   			var url = document.location.href;
+   			if(url.indexOf('?') > 0){
+   				url = url.split('?')[0];
+   			} else if(url.indexOf('#') > 0){
+   				url = url.split('#')[0];
+   			} 
+   			if(type == 'en'){
+   				$('#english').attr('href', url+'?lang=en');
+   			}else if(type == 'hi'){
+   				$('#hindi').attr('href', url+'?lang=hi');
+   			}
+   		}		
+	</script>
+        	<input type="hidden" id="dosversion" value="Version: 2.0.33.8782"/>
+
+<div id="about" class="modalDialog">
+	<div id="about_outer">
+		<div class="row">
+			<div class="about_heading">
+				<div class="col-md-7 col-sm-7">
+					<span style="font-size: 15px;">About FCI Depot Online System</span>	
+				</div>
+				<div class="col-md-4 col-sm-4" >
+				</div>
+				<div class="col-md-1 col-sm-1">
+					<a href="#cancel" title="Close" class="cancel glyphicon glyphicon-remove"></a>
+				</div>
+			</div>		
+		</div>
+		<div class="row about_body">
+			<div class="row" style="margin: 4px;">
+				<div class="col-md-12 col-sm-9">	
+					<span  style=" top: 6px;position: relative;left: 3px;color: #808080; font-size: 13px;">
+						Food Corporation of India (FCI) is a Government of India undertaking for execution of food policies of the Government and responsible for procurement, storage, movement and distribution of food grains through its large network of around 2000 depots spread across the entire country.
+					</span>
+				</div>
+			</div>
+			<div class="row" style="margin: 2px; margin-bottom: 10px;">
+			<div class="col-md-12 col-sm-9" style="margin-top: 0px;">
+				<span id="versionnum" class="versionnum"
+					style="top: 5px; position: relative; left: 3px; color: #808080; font-size: 13px;">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="aboutdos" class="modalDialog">
+	<div id="about_outer">
+		<div class="row">
+			<div class="about_heading">
+				<div class="col-md-7 col-sm-7">
+					<span style="font-size: 15px;">About FCI Depot Online System</span>	
+				</div>
+				<div class="col-md-4 col-sm-4" >
+				</div>
+				<div class="col-md-1 col-sm-1">
+					<a href="#cancel" title="Close" class="cancelmodal cancel glyphicon glyphicon-remove"></a>
+				</div>
+			</div>		
+		</div>
+		<div class="row about_body">
+			<div class="row" style="margin: 2px;">
+				<div class="col-md-12 col-sm-9">	
+					<span  style="top: 6px;position: relative;left: 3px;color: #808080; font-size: 13px;">
+						Food Corporation of India (FCI) is a Government of India undertaking for execution of food policies of the Government and responsible for procurement, storage, movement and distribution of food grains through its large network of around 2000 depots spread across the entire country.
+					</span>
+				</div>
+			</div>
+			<div id="infosection" class="row" style="margin-top: 16px; margin-bottom: 16px;">
+					
+			</div>
+			<div class="row" style="margin: 5px; margin-bottom: 10px;">
+			<div class="col-md-12 col-sm-9" style="margin-top: -20px;">
+				<span id="versionnum1" class="versionnum"
+					style="top: 5px; position: relative; left: 3px; color: #808080; font-size: 13px;">
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var throttle = false;
+
+	if(typeof(readCookie("_doslastlogin")) == 'undefined'){
+		document.querySelector('#versionnum').addEventListener('click', function (evt) {
+		    if (!throttle && evt.detail === 3) {
+		    	$('#infosection').load("/getversioninfo");
+		    	location.href = "#aboutdos";
+		        throttle = true;
+		        setTimeout(function () {
+		            throttle = false;
+		        }, 1000);
+		    }
+		});
+		
+		document.querySelector('#versionnum1').addEventListener('click', function (evt) {
+		    if (!throttle && evt.detail === 3) {
+		    	$('#infosection').load("/getversioninfo");
+		    	location.href = "#aboutdos";
+		        throttle = true;
+		        setTimeout(function () {
+		            throttle = false;
+		        }, 1000);
+		    }
+		});
+
+		if(location.hash == "#aboutdos"){
+			$('#infosection').load("/getversioninfo");
+		}
+		$('.cancelmodal').on('click',function(){
+			$('#infosection').html('');
+		})
+	}
+	
+
+	
+	$('.versionnum').html($('#dosversion').val())
+</script>
+
+</body>
+
+<!-- Mirrored from fcidepotonline.gov.in/farmers/register by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Mar 2018 04:09:17 GMT -->
+</html>

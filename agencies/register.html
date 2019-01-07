@@ -1,0 +1,504 @@
+
+<!-- Added to get useful core functionality in JSP tags (Ex: C:foreach)-->
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+
+<!-- Mirrored from fcidepotonline.gov.in/agencies/register by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Mar 2018 04:09:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>FCI Depot Online System - Arthiya Registration Page</title>
+<link rel="stylesheet" href="../css/jQueryvalidations.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css">
+	<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../css/site.css" rel="stylesheet" type="text/css" />
+	<link href="../css/general.css" rel="stylesheet" type="text/css" />
+	<link href="../css/bootstrap.min.css" rel="stylesheet" /> 
+     <link href="../css/about.css" rel="stylesheet" type="text/css"/>
+     <style type="text/css">
+		.input-lg, .form-control {
+			margin-bottom: 15px !important;
+			height: 50px !important;
+			width: 100% !important;
+		}
+		
+		html,body {
+	  		height: 100%;	  	
+		}
+	
+		#wrap {
+			min-height: 100%;
+	  		height: auto;
+	  		/* Negative indent footer by its height */
+	  		margin: 0 auto -60px;
+	  		/* Pad bottom by footer height */
+	  		padding: 0 0 60px;
+		}
+		
+		label{
+			margin-left: 0px !important;
+		}
+	
+	#welcomeDiv {
+			float:right;
+			position:absolute;
+			margin-top:0px;
+			right:0;
+			top:0;
+			margin-right: 25px;
+		}
+		
+		a.fill-div {
+		    display: block;
+		    height: 100%;
+		    width: 100%;
+		    text-decoration: none;
+		    z-index: 999999999 !important;
+		}
+		
+		body{
+		margin: -10px !important;
+		}
+	</style>
+     <script src="../js/jquery-1.10.2.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+	<script src="../js/general.js"></script>
+</head>
+<body>
+<body>
+	<div id="wrap">
+		<div id="header">
+	<div id="logo" class="hidden">
+		<!--  <img src="images/DepoSoft2.png" height="100px" width="100px" style="margin-bottom: 7px"/> -->
+	</div>
+	<div id="title">
+		<p class="site-title" align="center">
+			<!--  FCI Depot Online System --></p>
+			<div id="welcomeDiv">
+				<a href="#about" ><span id="aboutSpan"><b>About</b></span></a>
+										
+			</div>
+	</div>
+</div>
+		<div id="contentliquid">
+			<div class="container">
+			<div>
+				<h4>आढ़तिया पंजीकरण पृष्ठ</h4>
+			</div>
+			<div class="col-xs-12" style = "padding: 10px 0px 10px 15px">
+				<span>आढ़तिया को जोड़ने के लिए कृपया निम्नलिखित जानकारी भरें। (<font color="red">*</font>) अनिवार्य क्षेत्र को इंगित करता है।</span>	
+			</div>
+			<span id="successDiv" style='font-size: 13px; position: relative; margin-left: 5px;'></span>
+			<span id="errorDiv" style='font-size: 13px; position: relative; margin-left: 5px;'></span>
+					
+				<form action="#" method="POST" id="fillForm">
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="AgencyName" class="control-label required">आढ़तिया का नाम</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="agencyname" class="form-control" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="agencycode" class="control-label required">आढ़तिया कोड</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="agencycode" class="form-control" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="nodalofficer" class="control-label required">ज़ोन</label>
+						</div>
+						<div class="col-xs-12">
+								<select class="form-control" id="zone" name="zone" onchange="getRegionList(this.value)">
+									<option value="0">Please Select</option>
+									
+										<option value="1">EAST</option>
+									
+										<option value="2">WEST</option>
+									
+										<option value="3">NORTH</option>
+									
+										<option value="4">SOUTH</option>
+									
+										<option value="5">NORTH EAST</option>
+									
+								</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="nodalofficer" class="control-label required">क्षेत्र</label>
+						</div>
+						<div class="col-xs-12">
+								<select class="form-control" id="region" name="region.id" onchange="getDistrictList(this.value)">
+									<option value="0">Please Select</option>
+								</select>
+						</div>
+					</div>
+					 <div class="row">
+						<div class="col-xs-12">
+							<label for="nodalofficer" class="control-label required">जिला</label>
+						</div>
+						<div class="col-xs-12">
+								<select class="form-control" id="district" name="district.id" onchange="getNodalOfficersList(this.value)">
+									<option value="0">Please Select</option>
+								</select>
+						</div>
+					</div>
+					 <div class="row">
+						<div class="col-xs-12">
+							<label for="nodalofficer" class="control-label required">नोडल अधिकारी</label>
+						</div>
+						<div class="col-xs-12">
+								<select class="form-control" id="nodalofficer" name="nodalofficer.id">
+									<option value="0">Please Select</option>
+									
+								</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="agencyincharge" class="control-label required">आढ़तिया प्रभारी</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name='agencyincharge' class='form-control' id="agencyincharge" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="designation" class="control-label">पद</label>
+						</div>
+						<div class="col-xs-12">
+							<input name='designation' class='form-control' id="designation" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="address" class="control-label required">पता</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" id="category" name="address" class='form-control' >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="state" class="control-label required">राज्य</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="state" class="form-control" id="state" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="mobilenumber" class="control-label required">मोबाइल नंबर</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="mobilenumber" class="form-control" >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<label for="emailid" class="control-label required">ईमेल आईडी</label>
+						</div>
+						<div class="col-xs-12">
+							<input type="text" name="emailid" class="form-control" id="emailid" >
+						</div>
+					</div>
+					
+					<div id="bankaccountDiv">
+						<h4>बैंक खाता विवरण</h4>
+						<div class="row" >
+							<div class="col-xs-12">
+								<label for="accountnumber" class="control-label required">बैंक खाता संख्या</label>
+							</div>
+							<div class="col-xs-12">
+								<input type="text" name="accountnumber" class="form-control" >
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-xs-12">
+								<label for="bankname" class="control-label required">बैंक का नाम</label>
+							</div>
+							<div class="col-xs-12">
+								<input type="text" name="bankname" class="form-control" >
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-xs-12">
+								<label for="bankaddress" class="control-label">बैंक का पता</label>
+							</div>
+							<div class="col-xs-12">
+								<input type="text" name="bankaddress" class="form-control" >
+							</div></div>
+							<div class="row">
+							<div class="col-xs-12">
+								<label for="ifsccode" class="control-label required">आई॰ एफ॰ एस॰ सी॰ कोड</label>
+							</div>
+							<div class="col-xs-12">
+								<input type="text" name="ifsccode" class="form-control" >
+							</div>
+						</div>
+						<div class="row" >
+							<div class="col-xs-12">
+								<label for="micrcode" class="control-label required">एम॰ आई॰ सी॰ आर॰ कोड</label>
+							</div>
+							<div class="col-xs-12">
+								<input type="text" name="micrcode" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<label for="captchlabel">नीचे दिये के शब्द दर्ज करें: </label>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-12" >
+							<input id="verificationTextForgPassDiv"	name="verifyCaptcha" class="form-control" required/>
+						</div>
+					</div>
+					<br/>
+					<img id="captchaImage" src="captcha" />
+					<i style="cursor: pointer;" onclick="reloadcaptcha()"><i class="glyphicon glyphicon-refresh" style="top:-20px;font-size: 18px;"></i></i>
+					<div class="row">
+						<div class="col-md-8">
+								<button id="button1id" name="button1id" class="btn btn-success">सुरक्षित करें</button>
+								<a href="login.html" id="" name="button2id" class="btn btn-danger">निरस्त करें</a>
+						</div>
+					</div>
+				
+
+<input 
+    type="hidden" class="csrftokentag"
+    id = "_synchronizerToken"
+    name="_synchronizerToken"
+    value="15203092407201152570308699574454"
+/>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="../js/jquery.validate.min.js"></script>
+	<script	src="../js/jquery.additional-methods.min.js"></script>
+	<script>
+	function reloadcaptcha(){
+ 			var path = "/farmers/captcha?q="+ new Date().getTime();
+     	 	$('#captchaImage').attr('src', path);
+    }
+	function getRegionList(zoneId) {
+		$('#region').empty();
+		$.ajax({
+			type:'GET',
+			url: '/agencies/getRegionsForZone',
+			data: {zoneId: zoneId},
+			dataType : 'json',
+			async: false,
+			success: function(result){
+				if(result.length > 0) {
+					$('#region').append($("<option></option>").val(0).text("Please Select"));
+					for (var i = 0; i < result.length; i++) {
+						$('#region').append($("<option></option>").val(result[i].id).text(result[i].name));
+					}
+				}
+			},error: function(error){
+				alert('Error');
+			}
+		});
+	}
+	function getDistrictList(regionId) {
+		$('#district').empty();
+		$.ajax({
+			type:'GET',
+			url: '/agencies/getDistrictsForRegion',
+			dataType : 'json',
+			data: {regionId: regionId},
+			async: false,
+			success: function(result){
+				if(result.length > 0) {
+					$('#district').append($("<option></option>").val(0).text("Please Select"));
+					for (var i = 0; i < result.length; i++) {
+						$('#district').append($("<option></option>").val(result[i].id).text(result[i].name));
+					}
+				}
+			},error: function(error){
+				alert('Error');
+			}
+		});
+	}
+	function getNodalOfficersList(districtId) {
+		$('#nodalofficer').empty();
+		$.ajax({
+			type:'GET',
+			url: '/agencies/nodalofficers/list',
+			data: {districtId: districtId},
+			async: false,
+			success: function(result){
+				if(result.length > 0) {
+					$('#nodalofficer').append($("<option></option>").val(0).text("Please Select"));
+					for (var i = 0; i < result.length; i++) {
+						$('#nodalofficer').append($("<option></option>").val(result[i].id).text(result[i].name));
+					}
+				}
+			},error: function(error){
+				alert('Error');
+			}
+		});
+	}
+	
+	function setSuccessMessage(msg) {
+		var temp = "<div class='alert alert-success' <div class='alert alert-success'>"+
+        "<span onclick='clearError()' class='close' data-dismiss='alert'>&times;</span>"+
+		   "<strong> "+msg+""+"</strong>"+
+		   "</div>";
+		$('#successDiv').html(temp);
+		$('html, body').animate({
+		scrollTop: $("#successDiv").offset().top
+		}, 500);
+		setTimeout(function() {
+		$("#successDiv").html('');
+		}, 10000);
+	}
+	
+	function setErrorMessage(msg) {
+		var temp = "<div class='alert alert-danger alert-error' <div class='alert alert-danger alert-error'>"+
+        "<span onclick='clearError()' class='close' data-dismiss='alert'>&times;</span>"+
+		   "<strong>Error!</strong> "+msg+""+
+		   "</div>";
+	
+		$('#errorDiv').html(temp);
+		$('html, body').animate({
+		scrollTop: $("#errorDiv").offset().top
+		}, 500);
+		setTimeout(function() {
+		$("#errorDiv").html('');
+		}, 10000);
+	}
+	
+	function clearError(){
+		$('#successDiv').html('');
+		$('#errorDiv').html('');
+	}
+	</script>
+	<script>
+		$("#fillForm").validate({
+			rules : {
+				agencyname:{
+					required: true					
+				},
+				agencycode:{
+					required: true					
+				},
+				nodalofficerId:{
+					selectValidator: true					
+				},
+				emailid: {
+					required: true,
+					pattern : /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/	
+				},
+				state:{
+					required :true
+				},
+				address:{
+					required :true
+				},
+				mobilenumber:{
+					required :true,
+					number:true,
+					pattern:/^\d{10}$/
+				},
+				agencyincharge:{
+					required :true
+				},
+				"nodalofficer.id": {
+					selectValidator :true
+				},
+				"region.id": {
+					selectValidator :true
+				},
+				"district.id": {
+					selectValidator :true
+				},
+				zone: {
+					selectValidator :true
+				},
+				
+				accountnumber :{
+					required :true
+				},
+				bankname :{
+					required :true
+				},
+				ifsccode :{
+					required :true
+				},
+				micrcode :{
+					required :true
+				}
+			},
+			messages:{
+				agencyname : {
+					required: "Enter Agency Name"
+				},
+				agencycode:{
+					required: "Enter Agency Code"
+				},
+				nodalofficerId:{
+					selectValidator: "Please Select Nodal Officer"
+				},
+				emailid: {
+					required : "Enter Email Id",
+					pattern : "Enter a valid Email Id"
+				},
+				state:{
+					required: "Enter Agency State"
+				},
+				address:{
+					required: "Enter Agency Address"
+				},
+				mobilenumber:{
+					required: "Enter Mobile Number",
+					number:"Enter valid Mobile Number",
+					pattern: "Enter valid Mobile Number"
+				},
+				agencyincharge:{
+					required: "Enter Agency Incharge Name"
+				},
+				"nodalofficer.id": {
+					selectValidator: "Please select Nodal Officer"
+				},
+				"region.id": {
+					selectValidator: "Please select Region"
+				},
+				"district.id": {
+					selectValidator: "Please select District"
+				},
+				zone: {
+					selectValidator: "Please select Zone"
+				},
+				accountnumber:{
+					required : "Enter Account Number"
+				},bankname :{
+					required : "Enter Bank Name"
+				},
+				ifsccode :{
+					required : "Enter IFSC Code"
+				},
+				micrcode :{
+					required : "Enter MICR Code"
+				}
+			}
+		});
+	
+	</script>
+
+<!-- Mirrored from fcidepotonline.gov.in/agencies/register by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Mar 2018 04:09:17 GMT -->
+</html>

@@ -1,0 +1,526 @@
+/*
+ * author:naveenv
+ */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#wrapper {
+	position: relative;
+	height: 100%;
+}
+#myBody {
+	background-color: #F0F0F0;
+}
+.otherlogins {
+	padding: 1px 1px 2px;
+	border-radius: 0 !important;
+}
+.myFontFamily {
+	font-family: 'Open Sans', sans-serif;
+}
+.myFont {
+	/*79720F*/
+	font-size: 18px!important;
+	font-style: normal!important;
+	font-weight: 300!important;
+}
+.submitBtn {
+	padding: 5px 12px !important;
+	border-radius: 0 !important;
+	margin-top: 5px !important;
+	float: right;
+}
+.panel-heading {
+	padding: 5px 15px;
+}
+.panel{
+	border-radius: 0;
+}
+#Landing-screen {
+	background: url(../images/NewLogin/fci-background.jpg);
+	background-size: cover;
+	position: relative;
+	height: 78%;
+	min-height: 78%;
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.mainContainer {
+	background-color: #FFFFFF;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: auto;
+	padding: 10px 10px 10px 10px;
+}
+.loginPanel {
+	margin-top: 5px;
+}
+#password {
+	margin-top: 2px;
+}
+.mypanel-body {
+	padding-bottom: 4px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.dataField {
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 300;
+}
+#footer {
+	background-color: #1f2942;
+	background-repeat: no-repeat;
+	background-size: 100% 92%;
+}
+.usefullSites {
+	display: inline-block;
+	padding: 0 10px;
+	margin-bottom: 7px;
+	vertical-align: middle;
+	list-style: none;
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+.sub-sites {
+	text-align: center;
+	position: relative;
+	padding: 10px 15px 0;
+}
+.statsHead {
+	padding: 0px 0px !important;
+}
+.statsHeadImg {
+	display: table-cell;
+	width: 100% !important;
+	height: auto !important;
+}
+.highlightsImg {
+	margin-left: 25px;
+}
+.moreBtn {
+	border-radius: 0;
+	transition: all 0.1s linear;
+	transition-timing-function: linear;
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
+}
+.moreBtn:hover {
+	position: absolute;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+}
+.moreIcon {
+	font-size: 25px
+}
+.screenDisplayImg {
+	margin-left: 30px;
+	padding-bottom: 20px;
+}
+@media screen and (min-width: 1261px) and (min-width: 1600px) {
+	#Landing-screen {
+		width: 1600px !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#myBody {
+		width: 1600px !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.screenDisplayImg {
+		margin-left: 0px !important;
+		padding-bottom: 0px !important;
+		height: 250px;
+	}
+	#Landing-screen{
+		height: 57%;
+		min-height: 57%;
+	}
+}
+@media only screen and (max-width : 320px) {
+	#LoginBox{
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#Landing-screen{
+		height: 85%;
+		min-height: 85%;
+	}
+	.headerFont{
+		font-size: 25px !important;
+	}
+	.usefullSites{
+		font-size: 10px;
+	}
+	#aboutSpan{
+		font-size: 10px;
+	}
+	.loginPadClass{
+		padding-right: 0 !important;
+	}
+	.panelPadClass{
+		margin-right : 0 !important;
+	}
+	.slider-explanation {
+    	font-size: 8px;
+    }
+    .slider-main-heading {
+    	font-size: 14px;
+    }
+    #first-slider .carousel .item{
+    	min-height: 200px;
+    }
+    .youtubeSection{
+		height: 300px !important;
+	}
+    .text-section{
+    	margin-top: 0;
+    	width: 100%; 
+		margin-left: 0;
+		margin-bottom: 60%;
+		background: rgba(0,0,0,0.6); 
+    }
+    .weighbridge1, .email-sms, .miller-consign, .farmer, .tablet-view, .dashboard-2, .dashboard-1, .reports, .stacks { 
+		background-size: 100% 100% !important;
+	}
+	.carousel-control .fa-angle-left, .carousel-control .fa-angle-right{
+		display:none;
+	}
+	#description-Section{
+		font-size: 10px !important;
+	}
+    #Landing-screen-info{
+		padding-left: 35px !important;
+	}
+}
+@media only screen and (min-width: 321px) and (max-width : 480px) {
+	#LoginBox{
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#Landing-screen{
+		height: 85%;
+		min-height: 85%;
+	}
+	.headerFont{
+		font-size: 28px !important;
+	}
+	.usefullSites{
+		font-size: 12px;
+	}
+	.loginPadClass{
+		padding-right: 0 !important;
+	}
+	.panelPadClass{
+		margin-right : 0 !important;
+	}
+	.slider-explanation {
+    	font-size: 8px;
+    }
+    .slider-main-heading {
+    	font-size: 14px;
+    }
+    #first-slider .carousel .item{
+    	min-height: 200px;
+    }
+    .youtubeSection{
+		height: 300px !important;
+	}
+    .text-section{
+    	margin-top: 0;
+    	width: 100%;
+		margin-left: 0;
+		margin-bottom: 48%; 
+		background: rgba(0,0,0,0.6);
+    }
+    .weighbridge1, .email-sms, .miller-consign, .farmer, .tablet-view, .dashboard-2, .dashboard-1, .reports, .stacks { 
+		background-size: 100% 100% !important;
+	}
+	 .carousel-control .fa-angle-left, .carousel-control .fa-angle-right{
+		border:none;
+	}
+	.carousel-control .fa-angle-left{
+	 	left: -140%;
+	}
+	.carousel-control .fa-angle-right{
+		right: -140%;
+	}
+	#description-Section{
+		font-size: 12px !important;
+	}
+	#Landing-screen-info{
+		padding-left: 40px;
+	}
+}
+@media only screen and (min-width: 481px) and (max-width : 600px) {
+	#LoginBox{
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#Landing-screen{
+		height: 70%;
+		min-height: 70%;
+	}
+	#first-slider .carousel .item{
+    	min-height: 300px;
+	}
+	.youtubeSection{
+		height: 300px !important;
+	}
+	.weighbridge1, .email-sms, .miller-consign, .farmer, .tablet-view, .dashboard-2, .dashboard-1, .reports, .stacks { 
+		background-size: 100% 100% !important;
+	}
+	.text-section{
+    	margin-top: 0;
+    	width: 100%; 
+		margin-left: 0;
+		margin-bottom: 30%; 
+		color: #000;
+		background: rgba(0,0,0,0.6);
+    }
+    .carousel-control .fa-angle-left, .carousel-control .fa-angle-right{
+		border:none;
+	}
+	.carousel-control .fa-angle-left{
+	 	left: -140%;
+	}
+	.carousel-control .fa-angle-right{
+		right: -140%;
+	}
+	#Landing-screen-info{
+		padding-left: 50px;
+	}
+}
+@media only screen and (min-width: 481px) and (max-width : 768px) {
+	#LoginBox{
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	#Landing-screen{
+		height: 70%;
+		min-height: 70%;
+	}
+	#first-slider .carousel .item{
+    	min-height: 300px;
+	}
+	.youtubeSection{
+		height: 300px !important;
+	}
+	#description-Section{
+		font-size: 10px;
+	}
+	.carousel-control .fa-angle-left, .carousel-control .fa-angle-right{
+		border:none;
+	}
+	.carousel-control .fa-angle-left{
+	 	left: -140%;
+	}
+	.carousel-control .fa-angle-right{
+		right: -140%;
+	}
+	.slider-explanation {
+    	font-size: 10px;
+    }
+    .slider-main-heading {
+    	font-size: 18px;
+    }
+    .text-section{
+    	margin-top: -300px;
+    	width: 100%; 
+		color: #000;
+    }
+    #first-slider .carousel .item {
+    	min-height: 250px;
+	}
+	.youtubeSection{
+		height: 300px !important;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width : 990px) {
+	#Landing-screen{
+		height: 85%;
+		min-height: 85%;
+	}
+	#first-slider .carousel .item{
+    	min-height: 300px;
+	}
+	.youtubeSection{
+		height: 300px !important;
+	}
+	#description-Section{
+		font-size: 10px !important;
+	}
+	 .carousel-control .fa-angle-left, .carousel-control .fa-angle-right{
+		border:none;
+	}
+	.carousel-control .fa-angle-left{
+	 	left: -140%;
+	}
+	.carousel-control .fa-angle-right{
+		right: -140%;
+	}
+	.slider-explanation {
+    	font-size: 12px;
+    }
+    .slider-main-heading {
+    	font-size: 20px;
+    }
+    .text-section{
+    	margin-top: -370px;
+    	width: 100%; 
+		color: #000;
+    }
+}
+@media only screen  and (min-width: 991px) and (max-width: 1288px) {
+  #Landing-screen{
+		height: 80%;
+		min-height: 80%;
+	}
+	#description-Section{
+		font-size: 14px!important;
+	}
+	.screenDisplayImg {
+	    margin-left: 89px;
+	    padding-bottom: 20px;
+	    height: 250px;
+	}
+}
+@media only screen  and (min-width: 1029px) and (max-width: 1128px) {
+	#description-Section{
+		font-size: 12px!important;
+	}
+}
+#description-Section{
+	font-size: 17px;
+	font-style: normal!important;
+	font-weight: 500!important;
+	color:#000 !important;
+}
+.headingLogo {
+	margin-top: -60px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.headingText {
+	font-size: 30px !important;
+	font-weight: 300 !important;
+	font-family: Lato, sans-serif!important;
+	font-style: normal!important;
+}
+.headerLogos {
+	height: 100px;
+}
+.onlineLogo {
+	margin-left: 380px;
+}
+.headerFont {
+	padding-top: 10px;
+	font-size: 60px;
+	font-weight: bold;
+	font-style: normal!important;
+	color: #FFFCDD;
+}
+.count {
+	font-size: 40px;
+}
+.panel-red {
+	border-color: #d9534f !important;
+	background-color: #d9534f !important;
+}
+.panel-green {
+	border-color: #5CB85C !important;
+	background-color: #5CB85C !important;
+}
+.panel-primary{
+	border-color: #3657a3 !important;
+	background-color: #3657a3 !important;
+}
+.panel-yellow {
+	background-color: #f0ad4e !important;
+	border-color: #f0ad4e !important;
+}
+.panel-new-Color{
+	background-color:#1d2120 !important;
+}
+.panel-blue{
+	background-color: #5bc0de !important;
+}
+.huge{
+	font-size:40px;
+	font-weight:400;
+}
+.stat_panel_mainText{
+	font-size:15px;
+	font-weight:400;
+}
+#Landing-screen-info{
+	padding-top:25px !important;
+}
+#headerRow{
+	background: rgba(0,0,0,0.3);
+	padding-bottom:5px;
+}
+.input-group{
+    margin-bottom: 2px !important;
+}
+.input-group-addon{
+	color: #337ab7 !important;
+	background-color: #ffffff !important;
+	border: 1px solid #337ab7 !important;
+	border-radius: 0 !important;
+}
+#aboutSpan {
+    color: #89C3FC;
+    position: relative;
+    left: 15px;
+}
+#welcomeDiv {
+    float: right;
+    position: absolute;
+    margin-top: 5px;
+    right: 0;
+    top: 0;
+    margin-right: 35px;
+	z-index: 1 !important;
+}
+fieldset.scheduler-border {
+	border: 1px groove #ddd !important;
+	padding: 0 1.4em 1.4em 1.4em !important;
+	margin: 0 0 1.5em 0 !important;
+	-webkit-box-shadow: 0px 0px 0px 0px #000;
+	box-shadow: 0px 0px 0px 0px #000;
+}
+legend.scheduler-border {
+	font-size: 30px !important;
+	font-weight: 300 !important;
+	font-family: Lato, sans-serif!important;
+	font-style: normal!important;
+	text-align: center !important;
+	width: auto;
+	padding: 0 10px;
+	border-bottom: none;
+}
+legend {
+	margin-bottom: 5px !important;
+}
+.youtubeSection{
+	width:88%;
+	margin-left:auto; 
+	margin-right:auto; 
+	height:400px; 
+	text-align:center;
+}

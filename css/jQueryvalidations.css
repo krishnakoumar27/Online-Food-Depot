@@ -1,0 +1,26 @@
+#field { margin-left: .5em; float: left; }
+#field, label { float: left; font-family: Arial, Helvetica, sans-serif; font-size: small; }
+br { clear: both; }
+input { border: 1px solid black; margin-bottom: .5em;  }
+input.error { border: 1px solid #DD4B39; }
+label.error {
+	/* background: url('../images/unchecked.gif')  no-repeat; */
+	padding-left: 0px;
+	margin-left: .3em;
+	font-size: 12px !important;
+	position:relative;
+	top:-6px;
+}
+label.valid {
+	background: url('../images/checked.html') no-repeat;
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+.error{
+    margin: 0.5em 0px 0px;
+    display: block;
+    color: #DD4B39;
+    line-height: 17px;
+    font-weight: bold;
+}
